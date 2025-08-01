@@ -57,7 +57,7 @@ select
   from employee e
   left join department d on d.dept_id = e.dept_code
   left join location l on l.local_code = d.location_id
- where e.bonus is not null;	-- 하동운 부서 코드 없음. 조회 안됨.
+ where e.bonus is not null;	-- 하동운 부서 코드 없음. 조회 안됨. (리뷰 완) 하동운 레코드는 department, location 둘 다 null 이기 때문에 두 항목 다 left join 필요
 
 -- 6. 부서코드가 D2인 직원의 이름, 직급명, 부서명, 지역명을 조회하세오.
 select
