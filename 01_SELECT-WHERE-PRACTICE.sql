@@ -117,6 +117,5 @@ select
     , salary
     , job_code
   from employee
- where job_code = 'J2'
- or salary >= 2000000
- and job_code = 'J7';
+ where (job_code = 'J2' and salary >= 2000000)
+ or (job_code = 'J7');
