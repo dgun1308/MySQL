@@ -55,7 +55,7 @@ create table if not exists tbl_character_equipment
 	character_name varchar(30)
     , equipmentslot_id varchar(30)
     , item_id varchar(30)
-    , primary key (character_name, equipmentslot_id)	-- 한 부위에 하나의 아이템만 착용 제약조건
+    , primary key (character_name, equipmentslot_id)	-- 캐릭터별 한 부위에 하나의 아이템만 착용 제약조건
     , foreign key (character_name) references tbl_character(character_name)
     , foreign key (equipmentslot_id) references tbl_equipment_slot(equipmentslot_id)
     , foreign key (item_id) references tbl_item(item_id)
